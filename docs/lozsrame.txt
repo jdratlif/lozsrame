@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-| Legend of Zelda SRAM Editor 0.90
+| Legend of Zelda SRAM Editor 0.90a
 | Copyright (C) 2007-2008 emuWorks
 | http://games.technoplaza.net/
 --------------------------------------------------------------------------------
@@ -64,26 +64,29 @@
 | 3.0 Source Code
 --------------------------------------------------------------------------------
 
-  As with all emuWorks software, this program is free software and the source
-  code is available.
+  Binaries are available for Windows (2000 and later), Linux, and Mac OS X
+  (Tiger or later). The source is also available if you want to compile it
+  yourself.
   
-  To compile the source code, you will need Qt and an ISO C++ compiler. Qt
-  version 4 is required. The latest version as of this writing is Qt 4.3.3. You
-  can get the opensource version of Qt from http://www.trolltech.com/qt/.
+  To compile, you will need a modern C++ compiler and Qt 4.
   
-  Basic directions for compiling:
-    cd source
-    qmake
-    make
-    
-  Please contact us if you need help compiling the source.
+  On most platforms, compiling is as easy as opening a terminal and running
+  qmake && make (nmake for Visual Studio, or mingw32-make for mingw). That
+  should work on Linux, Mac OS X, and Windows.
+  
+  For more complete compilation instructions, consult our compiling HOWTO at
+  http://games.technoplaza.net/compile.php.
   
 --------------------------------------------------------------------------------
 | 4.0 Revision History
 --------------------------------------------------------------------------------
-    
-  Version 0.90 (February 1, 2008)
-    - Initial Release
+
+  Version 0.90a - Wednesday, December 17, 2008
+    - Updated compilation instructions.
+    - Added icon on mac.
+
+  Version 0.90 - Thursday, February 1, 2008
+    - Initial Release.
 
 --------------------------------------------------------------------------------
 | 5.0 Notes

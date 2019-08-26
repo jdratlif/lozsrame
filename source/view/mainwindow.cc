@@ -19,7 +19,7 @@
  * 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-// $Id: mainwindow.cc,v 1.11 2008/01/31 17:17:31 technoplaza Exp $
+// $Id: mainwindow.cc,v 1.13 2008/12/18 05:01:40 jdratlif Exp $
 
 #include <QActionGroup>
 #include <QButtonGroup>
@@ -468,7 +468,7 @@ void MainWindow::on_fileSaveAs_triggered(bool) {
 
 void MainWindow::on_helpAbout_triggered(bool) {
     QMessageBox::about(this, tr("About lozsrame"), 
-        tr("Legend of Zelda SRAM Editor Version 0.90\n"
+        tr("Legend of Zelda SRAM Editor Version 0.90a\n"
            "Copyright (C) 2007-2008 emuWorks\n"
            "http://games.technoplaza.net/"));
 }

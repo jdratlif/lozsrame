@@ -1,4 +1,5 @@
 # Doxyfile 1.5.4
+# $Id: Doxyfile,v 1.3 2008/12/18 05:05:28 jdratlif Exp $
 
 # This file describes the settings to be used by the documentation system
 # doxygen (www.doxygen.org) for a project
@@ -31,7 +32,7 @@ PROJECT_NAME           = "Legend of Zelda SRAM Editor"
 # This could be handy for archiving the generated documentation or 
 # if some version control system is used.
 
-PROJECT_NUMBER         = 0.90
+PROJECT_NUMBER         = 0.90a
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) 
 # base path where the generated documentation will be put. 

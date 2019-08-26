@@ -19,7 +19,7 @@
  * 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-// $Id: mainwindow.hh,v 1.10 2008/02/01 13:21:44 technoplaza Exp $
+// $Id: mainwindow.hh,v 1.11 2008/12/18 04:59:13 jdratlif Exp $
 
 #ifndef LOZSRAME_MAINWINDOW_HH_
 #define LOZSRAME_MAINWINDOW_HH_

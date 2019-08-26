@@ -16,7 +16,7 @@
    <string>Legend of Zelda SRAM Editor</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="../resources/lozsrame.qrc" >:/icons/icon.png</iconset>
+   <iconset resource="../resources/lozsrame.qrc" >:/icons/icon32x32.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget" >
    <layout class="QVBoxLayout" >
