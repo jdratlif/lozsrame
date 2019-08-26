@@ -1,0 +1,4 @@
+- write sram document
+- find bosses
+- associate inventory with grid data
+

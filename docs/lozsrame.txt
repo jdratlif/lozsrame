@@ -1,0 +1,126 @@
+--------------------------------------------------------------------------------
+| Legend of Zelda SRAM Editor 0.90
+| Copyright (C) 2007-2008 emuWorks
+| http://games.technoplaza.net/
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+| Table of Contents
+--------------------------------------------------------------------------------
+
+  - 1.0 Introduction
+  - 2.0 Usage
+  - 3.0 Source Code
+  - 4.0 Revision History
+  - 5.0 Notes
+    - 5.1 Credits
+    - 5.2 Known Issues
+  - 6.0 License
+  - 7.0 Contact Information
+  
+--------------------------------------------------------------------------------
+| 1.0 Introduction
+--------------------------------------------------------------------------------
+
+  Legend of Zelda SRAM Editor, or lozsrame for short, is a program that will let
+  you edit your save progress in The Legend of Zelda for NES.
+  
+  The game's own method for saving games was to used a battery backed portion
+  of RAM commonly referred to as SRAM (save RAM). Emulators such as Nestopia,
+  FCEU, and Nesten create a file with an .sav extention to keep this SRAM data.
+  This program is designed to edit these files and allow you to change your game
+  data.
+  
+  Note: this program is an SRAM editor, NOT a save state editor. This program
+  will not edit save states. Save states are emulator dependent, while SRAM
+  files work with any good NES emulator.
+
+--------------------------------------------------------------------------------
+| 2.0 Usage
+--------------------------------------------------------------------------------
+
+  To use this program, you will need two things. First, obviously, is the
+  program itself. Precompiled binaries are available for Windows, Linux, and Mac
+  OS X. Second is a SRAM file. There is a sample file included with the binary
+  distributions, but you will probably want to use the one from your emulator.
+  
+  You will need to consult your emulator docs for information about where the
+  SRAM file is stored, but the most common places are in the emulator's
+  directory or your ROM directory. It will be named similar to your ROM, but
+  with an .sav extention. For example: Legend of Zelda, The (U) (PRG0).sav.
+  
+  To open the SRAM, you can either drop the file onto the window, or choose
+  open from the file menu. Assuming you opened a valid SRAM file, the program
+  will display controls that you can use to edit the games.
+  
+  By default, the first valid game in the SRAM is opened. You can change this
+  from the game menu.
+  
+  The controls should be more or less obvious. When you are done with your
+  changes, you can quit the program. If you have not saved your changes, the
+  program will ask you to save before exit.
+  
+--------------------------------------------------------------------------------
+| 3.0 Source Code
+--------------------------------------------------------------------------------
+
+  As with all emuWorks software, this program is free software and the source
+  code is available.
+  
+  To compile the source code, you will need Qt and an ISO C++ compiler. Qt
+  version 4 is required. The latest version as of this writing is Qt 4.3.3. You
+  can get the opensource version of Qt from http://www.trolltech.com/qt/.
+  
+  Basic directions for compiling:
+    cd source
+    qmake
+    make
+    
+  Please contact us if you need help compiling the source.
+  
+--------------------------------------------------------------------------------
+| 4.0 Revision History
+--------------------------------------------------------------------------------
+    
+  Version 0.90 (February 1, 2008)
+    - Initial Release
+
+--------------------------------------------------------------------------------
+| 5.0 Notes
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+| 5.1 Credits
+--------------------------------------------------------------------------------
+
+  Thanks for Bero and Xodnizel for the wonderful FCEU emulator which I use
+  almost exclusively. Thanks also to BBitmaster, Parasyte, and sp for their work
+  on FCEUD, FCEUXD, and FCEUXD SP, a great debugging NES emulator which I used
+  to find the checksum algorithm and all the values.
+
+--------------------------------------------------------------------------------
+| 5.2 Known Issues
+--------------------------------------------------------------------------------
+
+  This program only edits your inventory, not the map data. This means if you
+  give yourself something you didn't have, you can still find it. This is not
+  really a problem, the problem is with taking something away. You will not be
+  able to get it back in-game. I may fix this in a future version.
+
+--------------------------------------------------------------------------------
+| 6.0 License
+--------------------------------------------------------------------------------
+
+  lozsrame is licensed under the GNU GPL. You can read the full text of the
+  license in the docs/license.txt directory. You can also learn more about it
+  at http://www.gnu.org/.
+
+--------------------------------------------------------------------------------
+| 7.0 Contact Information
+--------------------------------------------------------------------------------
+
+  You can contact the author at webmaster <AT> technoplaza <DOT> net. We also
+  have an online feedback form at http://www.technoplaza.net/feedback.php.
+  
+  Visit our website at http://games.technoplaza.net/.
+

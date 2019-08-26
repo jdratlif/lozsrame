@@ -1,0 +1,1220 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>602</width>
+    <height>498</height>
+   </rect>
+  </property>
+  <property name="acceptDrops" >
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle" >
+   <string>Legend of Zelda SRAM Editor</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="../resources/lozsrame.qrc" >:/icons/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <layout class="QVBoxLayout" >
+    <item>
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QGroupBox" name="groupBox" >
+        <property name="title" >
+         <string>Hero's Name</string>
+        </property>
+        <layout class="QVBoxLayout" >
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <property name="leftMargin" >
+          <number>5</number>
+         </property>
+         <property name="topMargin" >
+          <number>5</number>
+         </property>
+         <property name="rightMargin" >
+          <number>5</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="lineHerosName" >
+           <property name="sizePolicy" >
+            <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_5" >
+        <property name="title" >
+         <string>Play Count</string>
+        </property>
+        <layout class="QHBoxLayout" >
+         <property name="leftMargin" >
+          <number>5</number>
+         </property>
+         <property name="topMargin" >
+          <number>5</number>
+         </property>
+         <property name="rightMargin" >
+          <number>5</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QSpinBox" name="spinPlayCount" >
+           <property name="maximum" >
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_6" >
+        <property name="title" >
+         <string>Quest</string>
+        </property>
+        <layout class="QHBoxLayout" >
+         <property name="leftMargin" >
+          <number>5</number>
+         </property>
+         <property name="topMargin" >
+          <number>5</number>
+         </property>
+         <property name="rightMargin" >
+          <number>5</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QRadioButton" name="radioQuestFirst" >
+           <property name="text" >
+            <string>First</string>
+           </property>
+           <property name="checked" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioQuestSecond" >
+           <property name="text" >
+            <string>Second</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType" >
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>1</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QGroupBox" name="groupBox_3" >
+        <property name="title" >
+         <string>Equipment</string>
+        </property>
+        <layout class="QGridLayout" >
+         <property name="leftMargin" >
+          <number>5</number>
+         </property>
+         <property name="topMargin" >
+          <number>5</number>
+         </property>
+         <property name="rightMargin" >
+          <number>5</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>5</number>
+         </property>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="label" >
+           <property name="text" >
+            <string>Sword:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" >
+          <widget class="QRadioButton" name="radioSwordNone" >
+           <property name="text" >
+            <string>None</string>
+           </property>
+           <property name="checked" >
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2" >
+          <widget class="QRadioButton" name="radioSwordWooden" >
+           <property name="text" >
+            <string>Wooden</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3" >
+          <widget class="QRadioButton" name="radioSwordWhite" >
+           <property name="text" >
+            <string>White</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4" >
+          <widget class="QRadioButton" name="radioSwordMaster" >
+           <property name="text" >
+            <string>Master</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" >
+          <widget class="QLabel" name="label_2" >
+           <property name="text" >
+            <string>Arrows:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" >
+          <widget class="QRadioButton" name="radioArrowsNone" >
+           <property name="text" >
+            <string>None</string>
+           </property>
+           <property name="checked" >
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2" >
+          <widget class="QRadioButton" name="radioArrowsWooden" >
+           <property name="text" >
+            <string>Wooden</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3" >
+          <widget class="QRadioButton" name="radioArrowsSilver" >
+           <property name="text" >
+            <string>Silver</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4" >
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>1</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="0" >
+          <widget class="QLabel" name="label_3" >
+           <property name="text" >
+            <string>Candle:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" >
+          <widget class="QRadioButton" name="radioCandleNone" >
+           <property name="text" >
+            <string>None</string>
+           </property>
+           <property name="checked" >
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2" >
+          <widget class="QRadioButton" name="radioCandleBlue" >
+           <property name="text" >
+            <string>Blue</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3" >
+          <widget class="QRadioButton" name="radioCandleRed" >
+           <property name="text" >
+            <string>Red</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="4" >
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>1</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="0" >
+          <widget class="QLabel" name="label_4" >
+           <property name="text" >
+            <string>Potion:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" >
+          <widget class="QRadioButton" name="radioPotionNone" >
+           <property name="text" >
+            <string>None</string>
+           </property>
+           <property name="checked" >
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2" >
+          <widget class="QRadioButton" name="radioPotionBlue" >
+           <property name="text" >
+            <string>Blue</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3" >
+          <widget class="QRadioButton" name="radioPotionRed" >
+           <property name="text" >
+            <string>Red</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="4" >
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>1</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="4" column="0" >
+          <widget class="QLabel" name="label_5" >
+           <property name="text" >
+            <string>Ring:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" >
+          <widget class="QRadioButton" name="radioRingNone" >
+           <property name="text" >
+            <string>None</string>
+           </property>
+           <property name="checked" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2" >
+          <widget class="QRadioButton" name="radioRingBlue" >
+           <property name="text" >
+            <string>Blue</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3" >
+          <widget class="QRadioButton" name="radioRingRed" >
+           <property name="text" >
+            <string>Red</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="4" >
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>1</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" >
+        <item>
+         <widget class="QGroupBox" name="groupBox_2" >
+          <property name="title" >
+           <string>Inventory</string>
+          </property>
+          <layout class="QGridLayout" >
+           <item row="0" column="0" >
+            <widget class="QCheckBox" name="checkBoomerang" >
+             <property name="text" >
+              <string>Boomerang</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" >
+            <widget class="QCheckBox" name="checkBow" >
+             <property name="text" >
+              <string>Bow</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2" >
+            <widget class="QCheckBox" name="checkBook" >
+             <property name="text" >
+              <string>Book</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" >
+            <widget class="QCheckBox" name="checkMagicBoomerang" >
+             <property name="text" >
+              <string>Magic Boomerang</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" >
+            <widget class="QCheckBox" name="checkRaft" >
+             <property name="text" >
+              <string>Raft</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2" >
+            <widget class="QCheckBox" name="checkWhistle" >
+             <property name="text" >
+              <string>Whistle</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" >
+            <widget class="QCheckBox" name="checkPowerBracelet" >
+             <property name="text" >
+              <string>Power Bracelet</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" >
+            <widget class="QCheckBox" name="checkLadder" >
+             <property name="text" >
+              <string>Ladder</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2" >
+            <widget class="QCheckBox" name="checkWand" >
+             <property name="text" >
+              <string>Wand</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" >
+            <widget class="QCheckBox" name="checkMagicShield" >
+             <property name="text" >
+              <string>Magic Shield</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" >
+            <widget class="QCheckBox" name="checkMagicKey" >
+             <property name="text" >
+              <string>Magic Key</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2" >
+            <widget class="QCheckBox" name="checkBait" >
+             <property name="text" >
+              <string>Bait</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType" >
+           <enum>QSizePolicy::MinimumExpanding</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>20</width>
+            <height>1</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType" >
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>1</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QGroupBox" name="groupBox_7" >
+        <property name="title" >
+         <string>Dungeons</string>
+        </property>
+        <layout class="QGridLayout" >
+         <property name="leftMargin" >
+          <number>5</number>
+         </property>
+         <property name="topMargin" >
+          <number>5</number>
+         </property>
+         <property name="rightMargin" >
+          <number>5</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>5</number>
+         </property>
+         <item row="0" column="0" >
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType" >
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>1</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1" >
+          <widget class="QLabel" name="label_11" >
+           <property name="text" >
+            <string>Level 1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2" >
+          <widget class="QLabel" name="label_12" >
+           <property name="text" >
+            <string>Level 2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3" >
+          <widget class="QLabel" name="label_13" >
+           <property name="text" >
+            <string>Level 3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4" >
+          <widget class="QLabel" name="label_14" >
+           <property name="text" >
+            <string>Level 4</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5" >
+          <widget class="QLabel" name="label_15" >
+           <property name="text" >
+            <string>Level 5</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6" >
+          <widget class="QLabel" name="label_16" >
+           <property name="text" >
+            <string>Level 6</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="7" >
+          <widget class="QLabel" name="label_17" >
+           <property name="text" >
+            <string>Level 7</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="8" >
+          <widget class="QLabel" name="label_18" >
+           <property name="text" >
+            <string>Level 8</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="9" >
+          <widget class="QLabel" name="label_19" >
+           <property name="text" >
+            <string>Level 9</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" >
+          <widget class="QLabel" name="label_8" >
+           <property name="text" >
+            <string>Compass:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" >
+          <widget class="QCheckBox" name="checkCompass1" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2" >
+          <widget class="QCheckBox" name="checkCompass2" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3" >
+          <widget class="QCheckBox" name="checkCompass3" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4" >
+          <widget class="QCheckBox" name="checkCompass4" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5" >
+          <widget class="QCheckBox" name="checkCompass5" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6" >
+          <widget class="QCheckBox" name="checkCompass6" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7" >
+          <widget class="QCheckBox" name="checkCompass7" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="8" >
+          <widget class="QCheckBox" name="checkCompass8" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="9" >
+          <widget class="QCheckBox" name="checkCompass9" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" >
+          <widget class="QLabel" name="label_9" >
+           <property name="text" >
+            <string>Map:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" >
+          <widget class="QCheckBox" name="checkMap1" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2" >
+          <widget class="QCheckBox" name="checkMap2" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3" >
+          <widget class="QCheckBox" name="checkMap3" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="4" >
+          <widget class="QCheckBox" name="checkMap4" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5" >
+          <widget class="QCheckBox" name="checkMap5" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="6" >
+          <widget class="QCheckBox" name="checkMap6" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7" >
+          <widget class="QCheckBox" name="checkMap7" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="8" >
+          <widget class="QCheckBox" name="checkMap8" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="9" >
+          <widget class="QCheckBox" name="checkMap9" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" >
+          <widget class="QLabel" name="label_10" >
+           <property name="text" >
+            <string>Triforce</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" >
+          <widget class="QCheckBox" name="checkTriforce1" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2" >
+          <widget class="QCheckBox" name="checkTriforce2" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3" >
+          <widget class="QCheckBox" name="checkTriforce3" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="4" >
+          <widget class="QCheckBox" name="checkTriforce4" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5" >
+          <widget class="QCheckBox" name="checkTriforce5" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6" >
+          <widget class="QCheckBox" name="checkTriforce6" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="7" >
+          <widget class="QCheckBox" name="checkTriforce7" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="8" >
+          <widget class="QCheckBox" name="checkTriforce8" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="9" >
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType" >
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>1</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_9" >
+        <property name="title" >
+         <string>Potion Note</string>
+        </property>
+        <layout class="QVBoxLayout" >
+         <property name="leftMargin" >
+          <number>5</number>
+         </property>
+         <property name="topMargin" >
+          <number>5</number>
+         </property>
+         <property name="rightMargin" >
+          <number>5</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QRadioButton" name="radioNoteOldMan" >
+           <property name="text" >
+            <string>Old Man Has It</string>
+           </property>
+           <property name="checked" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioNoteLink" >
+           <property name="text" >
+            <string>Link Has It</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioNoteOldWoman" >
+           <property name="text" >
+            <string>Potion Lady Has It</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType" >
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>1</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QGroupBox" name="groupBox_8" >
+        <property name="title" >
+         <string>Treasure</string>
+        </property>
+        <layout class="QGridLayout" >
+         <property name="leftMargin" >
+          <number>5</number>
+         </property>
+         <property name="topMargin" >
+          <number>5</number>
+         </property>
+         <property name="rightMargin" >
+          <number>5</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>5</number>
+         </property>
+         <property name="horizontalSpacing" >
+          <number>6</number>
+         </property>
+         <property name="verticalSpacing" >
+          <number>6</number>
+         </property>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="label_20" >
+           <property name="text" >
+            <string>Rupees:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" >
+          <widget class="QSpinBox" name="spinRupees" >
+           <property name="maximum" >
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" >
+          <widget class="QLabel" name="label_21" >
+           <property name="text" >
+            <string>Keys:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" >
+          <widget class="QSpinBox" name="spinKeys" />
+         </item>
+         <item row="2" column="0" >
+          <widget class="QLabel" name="label_22" >
+           <property name="text" >
+            <string>Heart Containers:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" >
+          <widget class="QSpinBox" name="spinHeartContainers" >
+           <property name="minimum" >
+            <number>3</number>
+           </property>
+           <property name="maximum" >
+            <number>16</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" >
+        <item>
+         <widget class="QGroupBox" name="groupBox_4" >
+          <property name="title" >
+           <string>Bombs</string>
+          </property>
+          <layout class="QGridLayout" >
+           <property name="leftMargin" >
+            <number>5</number>
+           </property>
+           <property name="topMargin" >
+            <number>5</number>
+           </property>
+           <property name="rightMargin" >
+            <number>5</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>5</number>
+           </property>
+           <item row="0" column="0" >
+            <widget class="QLabel" name="label_6" >
+             <property name="text" >
+              <string>Carrying:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" >
+            <widget class="QSpinBox" name="spinBombsCarrying" >
+             <property name="maximum" >
+              <number>16</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" >
+            <widget class="QLabel" name="label_7" >
+             <property name="text" >
+              <string>Capacity:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" >
+            <widget class="QSpinBox" name="spinBombsCapacity" >
+             <property name="minimum" >
+              <number>8</number>
+             </property>
+             <property name="maximum" >
+              <number>16</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType" >
+           <enum>QSizePolicy::MinimumExpanding</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>20</width>
+            <height>1</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType" >
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>1</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer>
+      <property name="orientation" >
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType" >
+       <enum>QSizePolicy::MinimumExpanding</enum>
+      </property>
+      <property name="sizeHint" >
+       <size>
+        <width>20</width>
+        <height>1</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>602</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="fileOpen" />
+    <addaction name="separator" />
+    <addaction name="fileClose" />
+    <addaction name="fileSave" />
+    <addaction name="fileSaveAs" />
+    <addaction name="separator" />
+    <addaction name="fileExit" />
+   </widget>
+   <widget class="QMenu" name="menuGame" >
+    <property name="title" >
+     <string>&amp;Game</string>
+    </property>
+    <addaction name="gameGame1" />
+    <addaction name="gameGame2" />
+    <addaction name="gameGame3" />
+   </widget>
+   <widget class="QMenu" name="menuHelp" >
+    <property name="title" >
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="helpAbout" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuGame" />
+   <addaction name="menuHelp" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="fileOpen" >
+   <property name="text" >
+    <string>&amp;Open...</string>
+   </property>
+   <property name="statusTip" >
+    <string>Open Legend of Zelda SRAM File</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="fileClose" >
+   <property name="text" >
+    <string>&amp;Close</string>
+   </property>
+   <property name="statusTip" >
+    <string>Close Current SRAM File</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="fileSave" >
+   <property name="text" >
+    <string>&amp;Save</string>
+   </property>
+   <property name="statusTip" >
+    <string>Save Changes</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="fileSaveAs" >
+   <property name="text" >
+    <string>Save &amp;As...</string>
+   </property>
+   <property name="statusTip" >
+    <string>Save Changes Under a New Filename</string>
+   </property>
+  </action>
+  <action name="fileExit" >
+   <property name="text" >
+    <string>E&amp;xit</string>
+   </property>
+   <property name="statusTip" >
+    <string>Exit the Program</string>
+   </property>
+  </action>
+  <action name="gameGame1" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Game &amp;1</string>
+   </property>
+   <property name="statusTip" >
+    <string>Edit Game 1</string>
+   </property>
+   <property name="shortcut" >
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="gameGame2" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Game &amp;2</string>
+   </property>
+   <property name="statusTip" >
+    <string>Edit Game 2</string>
+   </property>
+   <property name="shortcut" >
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="gameGame3" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Game &amp;3</string>
+   </property>
+   <property name="statusTip" >
+    <string>Edit Game 3</string>
+   </property>
+   <property name="shortcut" >
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="helpAbout" >
+   <property name="text" >
+    <string>About</string>
+   </property>
+   <property name="statusTip" >
+    <string>Display Author and Copyright Information</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources/lozsrame.qrc" />
+ </resources>
+ <connections/>
+</ui>
