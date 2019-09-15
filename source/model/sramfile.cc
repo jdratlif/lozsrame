@@ -19,8 +19,6 @@
  * 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-// $Id: sramfile.cc,v 1.8 2008/01/30 22:57:04 technoplaza Exp $
-
 #include <cstring>
 #include <fstream>
 
@@ -32,7 +30,7 @@ using namespace lozsrame;
 
 SRAMFile::SRAMFile(const QString &filename) throw(InvalidSRAMFileException) :
     modified(false) {
-    std::ifstream file(filename.toAscii().data(), 
+    std::ifstream file(filename.toLatin1().data(), 
         std::ios_base::in | std::ios_base::binary);
     
     if (!file) {
@@ -173,7 +171,7 @@ bool SRAMFile::save(const QString &filename) {
         }
     }
     
-    std::ofstream file(filename.toAscii().data(),
+    std::ofstream file(filename.toLatin1().data(),
                        std::ios_base::out | std::ios_base::binary);
     
     if (!file) {
@@ -445,7 +443,7 @@ void SRAMFile::setName(const QString &name) {
     
     for (int count = 0; count < 8; ++count) {
         if (name.length() > count) {
-            char ch = name[count].toAscii();
+            char ch = name[count].toLatin1();
             
             if ((ch >= '0') && (ch <= '9')) {
                 ptr[count] = (ch - '0');
