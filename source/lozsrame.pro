@@ -1,9 +1,8 @@
-# $Id: lozsrame.pro,v 1.5 2008/12/18 20:49:18 jdratlif Exp $
-
 TEMPLATE = app
-TARGET = 
+TARGET = lozsrame
 DEPENDPATH += . exceptions model resources view
 INCLUDEPATH += .
+QT += widgets
 
 HEADERS += exceptions/invalidsramfileexception.hh \
 	model/sramfile.hh \
@@ -24,4 +23,3 @@ win32 {
 macx {
 	RC_FILE = resources/lozsrame.icns
 }
-

@@ -26,6 +26,7 @@
 #include <QDesktopWidget>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QMimeData>
 #include <QRegExpValidator>
 #include <QSignalMapper>
 #include <QUrl>
