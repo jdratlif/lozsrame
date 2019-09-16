@@ -1,0 +1,5 @@
+source/debug/*
+source/release/*
+source/Makefile*
+source/.qmake.stash
+source/ui_*
