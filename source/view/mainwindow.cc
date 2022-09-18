@@ -20,12 +20,14 @@
  */
 
 #include <QActionGroup>
+#include <QApplication>
 #include <QButtonGroup>
 #include <QDesktopWidget>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QMimeData>
 #include <QRegExpValidator>
+#include <QScreen>
 #include <QSignalMapper>
 #include <QUrl>
 
@@ -595,7 +597,7 @@ void MainWindow::showEvent(QShowEvent *) {
 
     // center on screen the first time we're displayed
     if (!centered) {
-        QRect screenRect = QApplication::desktop()->availableGeometry();
+        QRect screenRect = QApplication::primaryScreen()->availableGeometry();
         QRect windowRect = frameGeometry();
 
         move(screenRect.width() / 2 - windowRect.width() / 2,
