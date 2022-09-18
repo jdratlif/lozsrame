@@ -131,7 +131,7 @@ SRAMFile::SRAMFile(const QString &filename) : modified(false) {
     $A434:85 CE     STA $00CE
     $A436:60        RTS
 */
-quint16 SRAMFile::checksum(int game) const {
+auto SRAMFile::checksum(int game) const -> quint16 {
     Q_ASSERT((game >= 0) && (game < 3));
 
     quint16 checksum = 0;
@@ -163,7 +163,7 @@ quint16 SRAMFile::checksum(int game) const {
     return checksum;
 }
 
-bool SRAMFile::save(const QString &filename) {
+auto SRAMFile::save(const QString &filename) -> bool {
     for (int i = 0; i < 3; ++i) {
         if (isValid(i)) {
             setChecksum(i, checksum(i));
@@ -189,7 +189,7 @@ bool SRAMFile::save(const QString &filename) {
     return true;
 }
 
-enum sf_arrow SRAMFile::getArrows() const {
+auto SRAMFile::getArrows() const -> enum sf_arrow {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -206,7 +206,7 @@ void SRAMFile::setArrows(sf_arrow arrows) {
     modified           = true;
 }
 
-int SRAMFile::getBombCapacity() const {
+auto SRAMFile::getBombCapacity() const -> int {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -224,7 +224,7 @@ void SRAMFile::setBombCapacity(int capacity) {
     modified                 = true;
 }
 
-int SRAMFile::getBombs() const {
+auto SRAMFile::getBombs() const -> int {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -242,7 +242,7 @@ void SRAMFile::setBombs(int bombs) {
     modified          = true;
 }
 
-enum sf_candle SRAMFile::getCandle() const {
+auto SRAMFile::getCandle() const -> enum sf_candle {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -259,7 +259,7 @@ void SRAMFile::setCandle(enum sf_candle candle) {
     modified           = true;
 }
 
-quint16 SRAMFile::getChecksum(int game) const {
+auto SRAMFile::getChecksum(int game) const -> quint16 {
     Q_ASSERT((game >= 0) && (game < 3));
 
     const auto *ptr = reinterpret_cast<const quint16 *>(sram + CHECKSUM_OFFSET);
@@ -275,7 +275,7 @@ void SRAMFile::setChecksum(int game, quint16 checksum) {
     ptr[game] = qToBigEndian(checksum);
 }
 
-bool SRAMFile::hasCompass(int level) const {
+auto SRAMFile::hasCompass(int level) const -> bool {
     Q_ASSERT(isValid(game));
     Q_ASSERT((level >= 1) && (level <= 9));
 
@@ -307,7 +307,7 @@ void SRAMFile::setCompass(int level, bool give) {
     modified = true;
 }
 
-int SRAMFile::getHeartContainers() const {
+auto SRAMFile::getHeartContainers() const -> int {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -326,7 +326,7 @@ void SRAMFile::setHeartContainers(int containers) {
     modified = true;
 }
 
-bool SRAMFile::hasItem(enum sf_item item) const {
+auto SRAMFile::hasItem(enum sf_item item) const -> bool {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -343,7 +343,7 @@ void SRAMFile::setItem(enum sf_item item, bool give) {
     modified  = true;
 }
 
-int SRAMFile::getKeys() const {
+auto SRAMFile::getKeys() const -> int {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -361,7 +361,7 @@ void SRAMFile::setKeys(int keys) {
     modified         = true;
 }
 
-bool SRAMFile::hasMap(int level) const {
+auto SRAMFile::hasMap(int level) const -> bool {
     Q_ASSERT(isValid(game));
     Q_ASSERT((level >= 1) && (level <= 9));
 
@@ -393,7 +393,7 @@ void SRAMFile::setMap(int level, bool give) {
     modified = true;
 }
 
-QString SRAMFile::getName() const {
+auto SRAMFile::getName() const -> QString {
     Q_ASSERT(isValid(game));
 
     QString     name;
@@ -476,7 +476,7 @@ void SRAMFile::setName(const QString &name) {
     modified = true;
 }
 
-enum sf_note SRAMFile::getNote() const {
+auto SRAMFile::getNote() const -> enum sf_note {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -493,7 +493,7 @@ void SRAMFile::setNote(enum sf_note note) {
     modified         = true;
 }
 
-int SRAMFile::getPlayCount() const {
+auto SRAMFile::getPlayCount() const -> int {
     Q_ASSERT(isValid(game));
 
     const unsigned char *ptr = (reinterpret_cast<const unsigned char *>(sram)
@@ -513,7 +513,7 @@ void SRAMFile::setPlayCount(int count) {
     modified  = true;
 }
 
-enum sf_potion SRAMFile::getPotion() const {
+auto SRAMFile::getPotion() const -> enum sf_potion {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -530,7 +530,7 @@ void SRAMFile::setPotion(enum sf_potion potion) {
     modified           = true;
 }
 
-enum sf_quest SRAMFile::getQuest() const {
+auto SRAMFile::getQuest() const -> enum sf_quest {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + MISC_DATA + QUEST_OFFSET);
@@ -547,7 +547,7 @@ void SRAMFile::setQuest(enum sf_quest quest) {
     modified  = true;
 }
 
-enum sf_ring SRAMFile::getRing() const {
+auto SRAMFile::getRing() const -> enum sf_ring {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -564,7 +564,7 @@ void SRAMFile::setRing(enum sf_ring ring) {
     modified         = true;
 }
 
-int SRAMFile::getRupees() const {
+auto SRAMFile::getRupees() const -> int {
     Q_ASSERT(isValid(game));
 
     const unsigned char *ptr =
@@ -585,7 +585,7 @@ void SRAMFile::setRupees(int rupees) {
     modified           = true;
 }
 
-enum sf_sword SRAMFile::getSword() const {
+auto SRAMFile::getSword() const -> enum sf_sword {
     Q_ASSERT(isValid(game));
 
     const char *ptr = (sram + INVENTORY_DATA + (game * INVENTORY_DATA_SIZE));
@@ -602,7 +602,7 @@ void SRAMFile::setSword(enum sf_sword sword) {
     modified          = true;
 }
 
-bool SRAMFile::hasTriforce(int piece) const {
+auto SRAMFile::hasTriforce(int piece) const -> bool {
     Q_ASSERT(isValid(game));
     Q_ASSERT((piece >= 1) && (piece <= 8));
 

@@ -139,7 +139,7 @@ MainWindow::MainWindow() : QMainWindow(), ignoreSignals(false), open(false) {
     updateUI();
 }
 
-bool MainWindow::closeSRAM() {
+auto MainWindow::closeSRAM() -> bool {
     Q_ASSERT(open);
 
     if (sram->isModified()) {
