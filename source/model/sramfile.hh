@@ -193,7 +193,7 @@ namespace lozsrame {
          *
          * @throw InvalidSRAMFileException if the file is not a valid SRAM file.
          */
-        SRAMFile(const QString &filename) throw(InvalidSRAMFileException);
+        SRAMFile(const QString &filename);
 
         /**
          * Saves the SRAM data to a file.

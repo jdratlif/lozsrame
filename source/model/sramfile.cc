@@ -28,8 +28,7 @@
 
 using namespace lozsrame;
 
-SRAMFile::SRAMFile(const QString &filename) throw(InvalidSRAMFileException)
-    : modified(false) {
+SRAMFile::SRAMFile(const QString &filename) : modified(false) {
     std::ifstream file(filename.toLatin1().data(),
                        std::ios_base::in | std::ios_base::binary);
 
