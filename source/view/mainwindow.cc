@@ -120,7 +120,7 @@ MainWindow::MainWindow() : QMainWindow(), ignoreSignals(false), open(false) {
 
     // setup name validator
     auto *nameValidator =
-        new QRegExpValidator(QRegExp("[A-Z0-9 ,!'&\\.\"\\?_]{0,8}"), this);
+        new QRegExpValidator(QRegExp(R"([A-Z0-9 ,!'&\."\?_]{0,8})"), this);
     ui.lineHerosName->setValidator(nameValidator);
 
     // setup connections for the game menu
