@@ -40,49 +40,49 @@ MainWindow::MainWindow() : QMainWindow(), ignoreSignals(false), open(false) {
     ui.setupUi(this);
 
     // setup button groups
-    QActionGroup *gameActionGroup = new QActionGroup(this);
+    auto *gameActionGroup = new QActionGroup(this);
     gameActionGroup->addAction(ui.gameGame1);
     gameActionGroup->addAction(ui.gameGame2);
     gameActionGroup->addAction(ui.gameGame3);
     gameActionGroup->setExclusive(true);
 
-    QButtonGroup *questButtonGroup = new QButtonGroup(this);
+    auto *questButtonGroup = new QButtonGroup(this);
     questButtonGroup->addButton(ui.radioQuestFirst);
     questButtonGroup->addButton(ui.radioQuestSecond);
     questButtonGroup->setExclusive(true);
 
-    QButtonGroup *swordButtonGroup = new QButtonGroup(this);
+    auto *swordButtonGroup = new QButtonGroup(this);
     swordButtonGroup->addButton(ui.radioSwordNone);
     swordButtonGroup->addButton(ui.radioSwordWooden);
     swordButtonGroup->addButton(ui.radioSwordWhite);
     swordButtonGroup->addButton(ui.radioSwordMaster);
     swordButtonGroup->setExclusive(true);
 
-    QButtonGroup *arrowsButtonGroup = new QButtonGroup(this);
+    auto *arrowsButtonGroup = new QButtonGroup(this);
     arrowsButtonGroup->addButton(ui.radioArrowsNone);
     arrowsButtonGroup->addButton(ui.radioArrowsWooden);
     arrowsButtonGroup->addButton(ui.radioArrowsSilver);
     arrowsButtonGroup->setExclusive(true);
 
-    QButtonGroup *candleButtonGroup = new QButtonGroup(this);
+    auto *candleButtonGroup = new QButtonGroup(this);
     candleButtonGroup->addButton(ui.radioCandleNone);
     candleButtonGroup->addButton(ui.radioCandleBlue);
     candleButtonGroup->addButton(ui.radioCandleRed);
     candleButtonGroup->setExclusive(true);
 
-    QButtonGroup *potionButtonGroup = new QButtonGroup(this);
+    auto *potionButtonGroup = new QButtonGroup(this);
     potionButtonGroup->addButton(ui.radioPotionNone);
     potionButtonGroup->addButton(ui.radioPotionBlue);
     potionButtonGroup->addButton(ui.radioPotionRed);
     potionButtonGroup->setExclusive(true);
 
-    QButtonGroup *ringButtonGroup = new QButtonGroup(this);
+    auto *ringButtonGroup = new QButtonGroup(this);
     ringButtonGroup->addButton(ui.radioRingNone);
     ringButtonGroup->addButton(ui.radioRingBlue);
     ringButtonGroup->addButton(ui.radioRingRed);
     ringButtonGroup->setExclusive(true);
 
-    QButtonGroup *noteButtonGroup = new QButtonGroup(this);
+    auto *noteButtonGroup = new QButtonGroup(this);
     noteButtonGroup->addButton(ui.radioNoteOldMan);
     noteButtonGroup->addButton(ui.radioNoteLink);
     noteButtonGroup->addButton(ui.radioNoteOldWoman);
@@ -119,12 +119,12 @@ MainWindow::MainWindow() : QMainWindow(), ignoreSignals(false), open(false) {
     triforceChecks[7] = ui.checkTriforce8;
 
     // setup name validator
-    QRegExpValidator *nameValidator =
+    auto *nameValidator =
         new QRegExpValidator(QRegExp("[A-Z0-9 ,!'&\\.\"\\?_]{0,8}"), this);
     ui.lineHerosName->setValidator(nameValidator);
 
     // setup connections for the game menu
-    QSignalMapper *gameMapper = new QSignalMapper(this);
+    auto *gameMapper = new QSignalMapper(this);
 
     gameMapper->setMapping(ui.gameGame1, 0);
     gameMapper->setMapping(ui.gameGame2, 1);

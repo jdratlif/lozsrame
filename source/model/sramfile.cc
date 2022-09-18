@@ -262,8 +262,7 @@ void SRAMFile::setCandle(enum sf_candle candle) {
 quint16 SRAMFile::getChecksum(int game) const {
     Q_ASSERT((game >= 0) && (game < 3));
 
-    const quint16 *ptr =
-        reinterpret_cast<const quint16 *>(sram + CHECKSUM_OFFSET);
+    const auto *ptr = reinterpret_cast<const quint16 *>(sram + CHECKSUM_OFFSET);
 
     return qFromBigEndian(ptr[game]);
 }
@@ -271,7 +270,7 @@ quint16 SRAMFile::getChecksum(int game) const {
 void SRAMFile::setChecksum(int game, quint16 checksum) {
     Q_ASSERT((game >= 0) && (game < 3));
 
-    quint16 *ptr = reinterpret_cast<quint16 *>(sram + CHECKSUM_OFFSET);
+    auto *ptr = reinterpret_cast<quint16 *>(sram + CHECKSUM_OFFSET);
 
     ptr[game] = qToBigEndian(checksum);
 }
