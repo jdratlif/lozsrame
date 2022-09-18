@@ -19,8 +19,6 @@
  * 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-// $Id: lozsrame.cc,v 1.7 2008/01/29 20:02:13 technoplaza Exp $
-
 #include <QApplication>
 
 #include "view/mainwindow.hh"
@@ -29,10 +27,9 @@ using namespace lozsrame;
 
 int main(int argc, char **argv) {
     QApplication app(argc, argv);
-    MainWindow window;
-    
+    MainWindow   window;
+
     window.show();
-    
+
     return app.exec();
 }
-

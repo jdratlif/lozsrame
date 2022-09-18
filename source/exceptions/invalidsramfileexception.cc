@@ -19,7 +19,4 @@
  * 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-// $Id: invalidsramfileexception.cc,v 1.2 2008/01/28 02:37:51 technoplaza Exp $
-
 #include "exceptions/invalidsramfileexception.hh"
-
