@@ -1,5 +1,9 @@
+source/**/moc_*
+source/**/qrc_*
+source/**/*.o
 source/debug/*
 source/release/*
 source/Makefile*
 source/.qmake.stash
+source/lozsrame
 source/ui_*
